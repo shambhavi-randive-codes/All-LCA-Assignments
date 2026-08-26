@@ -1,1 +1,26 @@
+#INSERT
+planets = ["Earth", "Jupiter", "Saturn"]
+planets.insert(2, "Mars")
+print(planets)
+# Output: ['Earth', 'Jupiter', 'Mars', 'Saturn']
 
+
+#DELETE
+planets = ["Earth", "Jupiter", "Saturn"]
+del planets[1]
+print(planets)
+# Output: ['Earth', 'Saturn']
+
+
+#REMOVE
+planets = ["Earth", "Mars", "Jupiter", "Mars", "Saturn"]
+planets.remove("Mars")
+print(planets)
+# Output: ['Earth', 'Jupiter', 'Mars', 'Saturn']
+
+
+#UPDATE
+planets = ["Earth", "Jupiter", "Saturn"]
+planets[0] = "Venus"
+print(planets)
+# Output: ['Venus', 'Jupiter', 'Saturn']
