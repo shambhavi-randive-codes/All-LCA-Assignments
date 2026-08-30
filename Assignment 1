@@ -12,4 +12,42 @@ elif side1 == side2 or side2 == side3 or side1 == side3:
 else:
         print("The triangle is Scalene.")
         
- 
+#Largest of 3 numbers 
+a = int(input("Enter number: "))
+b = int(input("Enter number: "))
+c = int(input("Enter number: "))
+if a >= b and a >= c:
+    largest = a
+elif b >= a and b >= c:
+    largest = b
+else:
+    largest = c
+print("Largest number is:", largest)
+
+#Add, delete, remove, and update in list
+#INSERT
+planets = ["Earth", "Jupiter", "Saturn"]
+planets.insert(2, "Mars")
+print(planets)
+# Output: ['Earth', 'Jupiter', 'Mars', 'Saturn']
+
+
+#DELETE
+planets = ["Earth", "Jupiter", "Saturn"]
+del planets[1]
+print(planets)
+# Output: ['Earth', 'Saturn']
+
+
+#REMOVE
+planets = ["Earth", "Mars", "Jupiter", "Mars", "Saturn"]
+planets.remove("Mars")
+print(planets)
+# Output: ['Earth', 'Jupiter', 'Mars', 'Saturn']
+
+
+#UPDATE
+planets = ["Earth", "Jupiter", "Saturn"]
+planets[0] = "Venus"
+print(planets)
+# Output: ['Venus', 'Jupiter', 'Saturn']
