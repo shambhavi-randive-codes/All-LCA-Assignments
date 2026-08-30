@@ -1,1 +1,133 @@
+#ASSIGNMENT WK 1
+Theory:
+1.Explain Lists in Python with the help of at least five methods.
+A1.A List is used to store multiple items in a single variable. Lists are ordered, changeable (mutable), and allow duplicate values. We write them with square brackets [].
+Five methods of a list:
+1]append(): Adds a new element to the end of the list.
+eg: my_list.append(10)
+2]insert(): Adds an element at a specific index position.
+eg:my_list.insert(0, "Apple")
+3]remove(): Removes the first item that matches a specific value.
+eg:my_list.remove("Apple")
+4]pop(): Removes the item at a specific position or if not specified removes item from the end.
+eg:my_list.pop(1)
+5]sort(): Sorts the list in ascending order.
+eg:my_list.sort()
 
+2.Explain Tuples in Python with the help of at least five methods.
+A Tuple is just like a list, but it is immutable, meaning we cannot change, add, or remove items after we create it. We write them with round brackets ().
+#Note: Because they can't be changed, tuples only have two built-in methods. To complete the five, we can use standard built-in Python functions that work on tuples.
+Five methods of Tuple:
+1]count(): Returns how many times a specific value appears in the tuple.
+eg:my_tuple.count(2)
+2]index(): Searches for a value and tells you its position.
+eg:my_tuple.index(5)
+3]len(): A built-in function that tells you how many items are inside.
+eg:len(my_tuple)
+4]max(): Returns the highest value item in the tuple.
+eg:max(my_tuple)
+5]min(): Returns the lowest value item in the tuple.
+eg:min(my_tuple)
+
+3. Explain Dictionaries in Python with the help of at least five methods.
+A Dictionary stores data in "key:value" pairs. It is ordered, changeable, and does not allow duplicate keys. We write them with curly brackets {}.
+Five methods of a dictionary:
+1]pop():The pop() method removes the item with the specified key name.
+eg:my_dict.pop("name")
+2]delete :The del keyword removes the item with the specified key name.
+eg:del my_dict["name"]
+3]items(): Gives you a list of all the key-value pairs as tuples.
+eg:my_dict.items()
+4]get(): Returns the value of a specific key.
+eg:my_dict.get("name") or my_dict["name"]
+5]update(): Adds new key-value pairs or updates existing ones.
+eg:my_dict.update({"age": 19})
+
+
+Algorithm / Pseudo code:
+Start.
+
+Create a Dictionary with some student details.
+
+Append a new key-value pair to the dictionary.
+
+Remove an item from the dictionary using pop().
+
+Print the dictionary to show it worked.
+
+Create a Tuple with some numbers.
+
+Print a message explaining that we cannot append or remove from Tuples directly.
+
+Show a trick: concatenate (add) two tuples together to create a brand new one.
+
+Stop.
+
+#PYTHON PROGRAM 
+# Dictionary Operations
+print("Dictionary Operations")
+
+# 1. Create
+my_dict = {"name": "Rahul", "branch": "AI & DS", "roll_no": 15}
+print("Original Dictionary:", my_dict)
+
+# 2. Append (Adding a new key-value pair)
+my_dict["city"] = "Pune"
+print("After appending city:", my_dict)
+
+# 3. Remove
+my_dict.pop("roll_no")
+print("After removing roll_no:", my_dict)
+print("\n")
+
+# Tuple Operations 
+print("Tuple Operations")
+
+# 1. Create
+my_tuple = (1, 2, 3)
+print("Original Tuple:", my_tuple)
+
+# 2. Append/Remove Explanation
+print("Note: Tuples are immutable! We can't use append() or remove() on them directly.")
+
+# 3. (Adding tuples to make a new one)
+new_tuple = my_tuple + (4, 5)
+print("New Tuple after concatenation:", new_tuple)
+
+#FAQS
+Q1. What will be the output of the following code snippet?
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(a[::2])
+A1.The output will be [1, 3, 5, 7, 9].
+
+Q2. What will be the output of the following code snippet?
+l = [1, 2, 3]
+init_tuple = ('Python',) * (l.__len__() - l[::-1][0])
+print(init_tuple)
+A2.The output is an empty tuple: ()
+Reason: l.__len__() is 3. The code l[::-1] reverses the list to [3, 2, 1], and getting the [0] index of that reversed list gives us 3. 
+So, the calculation is (3 - 3), which equals 0. If you multiply a tuple by 0, it empties it out.
+
+Q3. State the difference between List, Tuple, and Dictionary.
+A3.Feature	            List	         Tuple	       Dictionary
+Brackets used	            []             ()             {}
+How data is stored    Single items  Single items    Key:Value pairs
+Can we change it?	   Yes (Mutable)	No (Immutable)	 Yes (Mutable)
+
+Q4. What are the benefits of using Tuple assignment in Python?
+A4.Two main benefits are:
+Swapping variables easily: We can swap values without needing an extra temporary variable. Example: a, b = b, a.
+Returning multiple values: If we write a function, we can return more than one answer at the same time and save them directly into different variables.
+eg:# A function returning three different values
+def get_student_info():
+    name = "Rahul"
+    age = 17
+    grade = "aids"
+    return name, age, grade  # Python packs these into a tuple: ("Rahul", 17, "aids")
+
+# When we call the function, we provide three variables to catch the three values
+student_name, student_age, student_grade = get_student_info()
+
+print(student_name)  # Output: Rahul
+print(student_age)   # Output: 17
+print(student_grade) # Output: aids
