@@ -1,1 +1,52 @@
+#ASSIGNMENT WK 2
+Algorithm 
+
+Step 1: Start
+Step 2: Declare three variables num1, num2, and num3.
+Step 3: Accept three integer numbers from the user.
+Step 4: Check if num1 is greater than or equal to num2 AND num1 is greater than or equal to num3.
+If True, set largest = num1 and go to Step 7.
+If False, proceed to Step 5.
+Step 5: Check if num2 is greater than or equal to num1 AND num2 is greater than or equal to num3.
+If True, set largest = num2 and go to Step 7.
+If False, proceed to Step 6.
+Step 6: If both above conditions are False, set largest = num3.
+Step 7: Display the largest number.
+Step 8: Stop
+
+Python Program
+# Accept three integer numbers from the user
+num1 = int(input("Enter the first integer: "))
+num2 = int(input("Enter the second integer: "))
+num3 = int(input("Enter the third integer: "))
+
+# Decision-making structure to find the largest number
+if (num1 >= num2) and (num1 >= num3):
+    largest = num1
+elif (num2 >= num1) and (num2 >= num3):
+    largest = num2
+else:
+    largest = num3
+
+# Display the largest of three integer numbers
+print("The largest number is:", largest)
+
+FAQ Answers
+Describe following logical and relational operators with suitable examples:
+Logical Operators:
+Logical operators are used to combine multiple conditional statements.
+and: Returns True only if both operands/conditions are true.
+Example: (5 > 3) and (10 > 5) returns True.
+or: Returns True if at least one of the operands/conditions is true.
+Example: (5 > 3) or (2 > 5) returns True.
+not: Reverses the logical state of its operand. If a condition is true, not makes it false.
+Example: not(5 > 3) returns False.
+Relational Operators:
+Relational (or comparison) operators are used to compare two values. They evaluate to a boolean value (True or False).
+== (Equal to): 5 == 5 (True)
+!= (Not equal to): 5 != 3 (True)
+> (Greater than): 10 > 5 (True)
+< (Less than): 2 < 8 (True)
+>= (Greater than or equal to): 5 >= 5 (True)
+<= (Less than or equal to): 4 <= 10 (True)
 
