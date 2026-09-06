@@ -1,3 +1,4 @@
+#ASSIGNMENT WK 3
 Theory:
 Q1. Explain System defined function and User defined functions
 A1)System Defined Functions (Built-in Functions): These are pre-written functions that are already available in Python. We don't have to write the code for them; we just use them directly.
@@ -15,13 +16,14 @@ def say_hello():  # This line is the declaration
 Function Calling: Defining a function doesn't make it run automatically. To actually execute the code inside the function, we have to "call" it by writing its name followed by parentheses.Example: say_hello()
 
 Algorithm / Pseudo code:
-Start.
-Accept the lengths of three sides from the user and store them in variables side1, side2, and side3.
-Define a function check_right_triangle(a, b, c).Inside the function, use the Pythagoras theorem formula ($a^2 + b^2 = c^2$). 
-Check if the square of any one side is equal to the sum of the squares of the other two sides.
-If the condition is true, print that it IS a right-angled triangle.
-If the condition is false, print that it IS NOT a right-angled triangle.Call the function and pass side1, side2, and side3 to it.
-Stop.
+1.Start.
+2.Accept the lengths of three sides from the user and store them in variables side1, side2, and side3.
+3.Define a function check_right_triangle(a, b, c).
+4.Inside the function, use the Pythagoras theorem formula ($a^2 + b^2 = c^2$). Check if the square of any one side is equal to the sum of the squares of the other two sides.
+5.If the condition is true, print that it IS a right-angled triangle.
+6.If the condition is false, print that it IS NOT a right-angled triangle.
+7.Call the function and pass side1, side2, and side3 to it.
+8.Stop.
 
 Python Program:
 # Function Declaration and Definition
