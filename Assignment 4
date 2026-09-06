@@ -1,12 +1,14 @@
 #ASSIGNMENT WK 3
+TO CHECK WHETHER OR NOT THE TRIANGLE IS RIGHT-ANGLED TRIANGLE USING FUNCTION
+
 Theory:
-Q1. Explain System defined function and User defined functions
+1. Explain System defined function and User defined functions
 A1)System Defined Functions (Built-in Functions): These are pre-written functions that are already available in Python. We don't have to write the code for them; we just use them directly.
 Example: print(), len(), input(), type().
 User Defined Functions: These are custom functions that the programmers write to perform a specific task that Python doesn't have a built-in function for.
 Example: Creating a function named check_triangle() 
 
-Q2. Explain def keyword with following terms:
+2. Explain def keyword with following terms:
 A2)In Python, the def keyword is used to create a function. def is short for "define".
 Function Declaration & Function Definition: In Python, declaration and definition happen at the exact same time. We use the def keyword followed by the function name, parentheses (), and a colon :
 The indented block of code right below it is the definition (the actual logic of what the function does).
@@ -19,7 +21,7 @@ Algorithm / Pseudo code:
 1.Start.
 2.Accept the lengths of three sides from the user and store them in variables side1, side2, and side3.
 3.Define a function check_right_triangle(a, b, c).
-4.Inside the function, use the Pythagoras theorem formula ($a^2 + b^2 = c^2$). Check if the square of any one side is equal to the sum of the squares of the other two sides.
+4.Inside the function, use the Pythagoras theorem formula (a^2 + b^2 = c^2). Check if the square of any one side is equal to the sum of the squares of the other two sides.
 5.If the condition is true, print that it IS a right-angled triangle.
 6.If the condition is false, print that it IS NOT a right-angled triangle.
 7.Call the function and pass side1, side2, and side3 to it.
@@ -32,7 +34,7 @@ def check_right_triangle(a, b, c):
     # Since we don't know which side the user entered is the longest, we check all 3 possibilities!
     
     if (a**2 + b**2 == c**2) or (b**2 + c**2 == a**2) or (c**2 + a**2 == b**2):
-        print("\nResult: Yes, it is a right-angled triangle!")
+        print("\nResult: Yes, it is a right-angled triangle.")
     else:
         print("\nResult: No, it is not a right-angled triangle.")
 
@@ -46,14 +48,15 @@ side3 = float(input("Enter the length of side 3: "))
 check_right_triangle(side1, side2, side3)
 
 FAQs:
-Q1. What is a Function in Python Programming?
-Answer: A function is a reusable block of organized code that is used to perform a single, specific task. Instead of writing the same code over and over again, you write it once in a function and just call the function whenever you need it.
+1. What is a Function in Python Programming?
+A1) A function is a reusable block of organized code that is used to perform a single, specific task. Instead of writing the same code over and over again, you write it once in a function and just call the function whenever you need it.
 
-Q2. Is it Mandatory for a Python Function to Return a Value?
-Answer: No, it is not mandatory. If you do not use a return statement in your function, Python will automatically return a special value called None in the background. Many functions just print something to the screen and don't need to return any calculations!
+2. Is it Mandatory for a Python Function to Return a Value?
+A2)If you write a function and do not include a return statement, Python will automatically return a special built-in value called None in the background.
+Many functions are written just to perform an action (like printing a message to the screen, saving a file, or modifying a list) rather than calculating and returning a specific answer.
 
-Q3. Name some standard Python errors?
-Answer: Here are 5 very common errors we face as beginners:
+3. Name some standard Python errors?
+A3) Here are 5 very common errors we face as beginners:
 1)SyntaxError: Occurs when you type the code wrong (like forgetting a colon : or a bracket).
 2)IndentationError: Occurs when you mess up the spaces/tabs at the beginning of a line (very common inside functions!).
 3)NameError: Occurs when you try to use a variable or function name that hasn't been created yet.
