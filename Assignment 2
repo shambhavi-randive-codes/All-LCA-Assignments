@@ -1,13 +1,14 @@
 #ASSIGNMENT WK 1
+DIFFERENT OPERATIONS ON DICTIONARY AND TUPLE DATA STRUCTURE
 Theory:
 1.Explain Lists in Python with the help of at least five methods.
-A1.A List is used to store multiple items in a single variable. Lists are ordered, changeable (mutable), and allow duplicate values. We write them with square brackets [].
+A1)A List is used to store multiple items in a single variable. Lists are ordered, changeable (mutable), and allow duplicate values. We write them with square brackets [].
 Five methods of a list:
 1]append(): Adds a new element to the end of the list.
 eg: my_list.append(10)
 2]insert(): Adds an element at a specific index position.
 eg:my_list.insert(0, "Apple")
-3]remove(): Removes the first item that matches a specific value.
+3]remove(): Removes the first item that matches a specific value.(Incase there are duplicate values in same list)
 eg:my_list.remove("Apple")
 4]pop(): Removes the item at a specific position or if not specified removes item from the end.
 eg:my_list.pop(1)
@@ -15,10 +16,10 @@ eg:my_list.pop(1)
 eg:my_list.sort()
 
 2.Explain Tuples in Python with the help of at least five methods.
-A Tuple is just like a list, but it is immutable, meaning we cannot change, add, or remove items after we create it. We write them with round brackets ().
+A2)A Tuple is just like a list, but it is immutable, meaning we cannot change, add, or remove items after we create it. We write them with round brackets ().
 #Note: Because they can't be changed, tuples only have two built-in methods. To complete the five, we can use standard built-in Python functions that work on tuples.
 Five methods of Tuple:
-1]count(): Returns how many times a specific value appears in the tuple.
+1]count(): Returns how many times a specific value appears in the tuple.(Duplicates are allowed)
 eg:my_tuple.count(2)
 2]index(): Searches for a value and tells you its position.
 eg:my_tuple.index(5)
@@ -30,7 +31,7 @@ eg:max(my_tuple)
 eg:min(my_tuple)
 
 3. Explain Dictionaries in Python with the help of at least five methods.
-A Dictionary stores data in "key:value" pairs. It is ordered, changeable, and does not allow duplicate keys. We write them with curly brackets {}.
+A3)A Dictionary stores data in "key:value" pairs. It is ordered, changeable, and does not allow duplicate keys. We write them with curly brackets {}.
 Five methods of a dictionary:
 1]pop():The pop() method removes the item with the specified key name.
 eg:my_dict.pop("name")
@@ -45,25 +46,18 @@ eg:my_dict.update({"age": 19})
 
 
 Algorithm / Pseudo code:
-Start.
-
-Create a Dictionary with some student details.
-
-Append a new key-value pair to the dictionary.
-
-Remove an item from the dictionary using pop().
-
-Print the dictionary to show it worked.
-
-Create a Tuple with some numbers.
-
-Print a message explaining that we cannot append or remove from Tuples directly.
-
-Show a trick: concatenate (add) two tuples together to create a brand new one.
-
-Stop.
+1.Start.
+2.Create a Dictionary with some student details.
+3.Append a new key-value pair to the dictionary.
+4.Remove an item from the dictionary using pop().
+5.Print the dictionary to show it worked.
+6.Create a Tuple with some numbers.
+7.Print a message explaining that we cannot append or remove from Tuples directly.
+8.Show a trick: concatenate (add) two tuples together to create a brand new one.
+9.Stop.
 
 #PYTHON PROGRAM 
+
 # Dictionary Operations
 print("Dictionary Operations")
 
@@ -102,9 +96,9 @@ A1.The output will be [1, 3, 5, 7, 9].
 
 Q2. What will be the output of the following code snippet?
 l = [1, 2, 3]
-init_tuple = ('Python',) * (l.__len__() - l[::-1][0])
+init_tuple = ('Python',) * (l.__len__() - l[::-1][0])  #[start:stop:increment] #[0:0:-1] -reverse list and print 0th item of new list 
 print(init_tuple)
-A2.The output is an empty tuple: ()
+A2.The output is an empty tuple=> ()
 Reason: l.__len__() is 3. The code l[::-1] reverses the list to [3, 2, 1], and getting the [0] index of that reversed list gives us 3. 
 So, the calculation is (3 - 3), which equals 0. If you multiply a tuple by 0, it empties it out.
 
